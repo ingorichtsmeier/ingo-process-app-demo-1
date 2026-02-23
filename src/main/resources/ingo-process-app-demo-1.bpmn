@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="57aa69a" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
-  <bpmn:process id="Process_1moh9lm" name="ingo-process-app-demo-1" isExecutable="true"><bpmn:extensionElements><zeebe:versionTag value="1.0"></zeebe:versionTag></bpmn:extensionElements>
+  <bpmn:process id="ingo-process-app-demo-1-process" name="Ingo Process App Demo 1" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:versionTag value="1.1" />
+    </bpmn:extensionElements>
     <bpmn:startEvent id="StartEvent_1" name="demo process wanted">
       <bpmn:outgoing>Flow_12rj8z7</bpmn:outgoing>
     </bpmn:startEvent>
@@ -19,7 +22,7 @@
     </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1moh9lm">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ingo-process-app-demo-1-process">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="150" y="100" width="36" height="36" />
         <bpmndi:BPMNLabel>
