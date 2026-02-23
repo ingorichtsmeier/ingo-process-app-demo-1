@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.camunda.client.annotation.Deployment;
 
 @SpringBootApplication
-@Deployment(resources = { "ingo-process-app-demo-1.bpmn", "Start simple.form" })
+@Deployment(resources = { "*.bpmn", "*.form" })
 public class DemoProcessApplication {
 
 	public static void main(String[] args) {
