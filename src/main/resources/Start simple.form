@@ -28,5 +28,6 @@
       "key": "name"
     }
   ],
-  "type": "default"
+  "type": "default",
+  "versionTag": "1.3"
 }
