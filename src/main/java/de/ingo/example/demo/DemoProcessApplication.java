@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.camunda.client.annotation.Deployment;
 
 @SpringBootApplication
-@Deployment(resources = { "*.bpmn", "*.form" })
+@Deployment(resources = { "classpath:*.bpmn", "classpath:*.form" })
 public class DemoProcessApplication {
 
 	public static void main(String[] args) {
