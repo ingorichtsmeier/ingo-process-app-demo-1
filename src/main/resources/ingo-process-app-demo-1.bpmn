@@ -2,16 +2,16 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="57aa69a" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
   <bpmn:process id="ingo-process-app-demo-1-process" name="Ingo Process App Demo 1" isExecutable="true">
     <bpmn:extensionElements>
-      <zeebe:versionTag value="1.1" />
+      <zeebe:versionTag value="1.2" />
     </bpmn:extensionElements>
     <bpmn:startEvent id="StartEvent_1" name="demo process wanted">
       <bpmn:outgoing>Flow_12rj8z7</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_12rj8z7" sourceRef="StartEvent_1" targetRef="Activity_1clqye0" />
     <bpmn:endEvent id="Event_1pd7drr" name="Demo completed">
-      <bpmn:incoming>Flow_1gisg1d</bpmn:incoming>
+      <bpmn:incoming>Flow_0ncy7ce</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_1gisg1d" sourceRef="Activity_1clqye0" targetRef="Event_1pd7drr" />
+    <bpmn:sequenceFlow id="Flow_1gisg1d" sourceRef="Activity_1clqye0" targetRef="Activity_0mlar0y" />
     <bpmn:userTask id="Activity_1clqye0" name="Start simple">
       <bpmn:extensionElements>
         <zeebe:userTask />
@@ -20,6 +20,14 @@
       <bpmn:incoming>Flow_12rj8z7</bpmn:incoming>
       <bpmn:outgoing>Flow_1gisg1d</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0ncy7ce" sourceRef="Activity_0mlar0y" targetRef="Event_1pd7drr" />
+    <bpmn:callActivity id="Activity_0mlar0y" name="Entries show">
+      <bpmn:extensionElements>
+        <zeebe:calledElement processId="EntriesShowProcess" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1gisg1d</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ncy7ce</bpmn:outgoing>
+    </bpmn:callActivity>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ingo-process-app-demo-1-process">
@@ -30,13 +38,17 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1pd7drr_di" bpmnElement="Event_1pd7drr">
-        <dc:Bounds x="402" y="100" width="36" height="36" />
+        <dc:Bounds x="542" y="100" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="378" y="143" width="84" height="14" />
+          <dc:Bounds x="518" y="143" width="84" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0jqsog6_di" bpmnElement="Activity_1clqye0">
         <dc:Bounds x="240" y="78" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0r324gd_di" bpmnElement="Activity_0mlar0y">
+        <dc:Bounds x="390" y="78" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_12rj8z7_di" bpmnElement="Flow_12rj8z7">
         <di:waypoint x="186" y="118" />
@@ -44,7 +56,11 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1gisg1d_di" bpmnElement="Flow_1gisg1d">
         <di:waypoint x="340" y="118" />
-        <di:waypoint x="402" y="118" />
+        <di:waypoint x="390" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ncy7ce_di" bpmnElement="Flow_0ncy7ce">
+        <di:waypoint x="490" y="118" />
+        <di:waypoint x="542" y="118" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
