@@ -1,0 +1,32 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "57aa69a"
+  },
+  "schemaVersion": 19,
+  "id": "start-simple-1nja5zl",
+  "components": [
+    {
+      "text": "### Just enter your name",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ichyum",
+        "columns": null
+      },
+      "id": "Field_1gxrfbt"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1sfn5i0",
+        "columns": null
+      },
+      "id": "Field_1xticd7",
+      "key": "name"
+    }
+  ],
+  "type": "default"
+}
