@@ -11,7 +11,7 @@ spec:
       restartPolicy: Never
       containers:
         - name: ingo-process-app-demo-1
-          image: 655394773887.dkr.ecr.eu-west-2.amazonaws.com/ingo-process-app-demo-1:6daf399be002653607fb08dcd22d7ba85c60f01a
+          image: 655394773887.dkr.ecr.eu-west-2.amazonaws.com/ingo-process-app-demo-1:4a52173047728ab965f36de9a4d4524555669329
           imagePullPolicy: Always
           env:
             - name: CAMUNDA_CLIENT_AUTH_METHOD
@@ -31,18 +31,3 @@ spec:
               value: "http://camunda-zeebe-gateway:26500"
             - name: CAMUNDA_CLIENT_RESTADDRESS
               value: "http://camunda-zeebe-gateway:8080"
-
-#          ports:
-#            - containerPort: 8080
-#---
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: my-app
-#spec:
-#  type: LoadBalancer
-#  selector:
-#    app: my-app
-#  ports:
-#    - port: 80
-#      targetPort: 8080
